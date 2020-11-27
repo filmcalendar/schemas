@@ -1,0 +1,36 @@
+{
+  "type": "object",
+  "anyOf": [
+    {
+      "required": ["title"]
+    },
+    {
+      "required": ["titleTranslated"]
+    }
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "titleTranslated": {
+      "type": "string"
+    },
+    "director": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "cast": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "year": {
+      "type": "number"
+    }
+  }
+}

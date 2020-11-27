@@ -1,0 +1,53 @@
+{
+  "name": "@filmcalendar/schemas",
+  "description": "JSON schemas for agent's dispatch validation",
+  "version": "0.0.0-development",
+  "repository": "git@github.com:filmcalendar/schemas.git",
+  "author": "Rui Costa",
+  "license": "MIT",
+  "keywords": [],
+  "files": [
+    "dist/*.ts"
+  ],
+  "main": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "source": "src/index.ts",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "4.8.1",
+    "@typescript-eslint/parser": "4.8.1",
+    "commitizen": "4.2.2",
+    "cz-conventional-changelog": "3.3.0",
+    "eslint": "7.14.0",
+    "eslint-config-airbnb-typescript": "12.0.0",
+    "eslint-config-prettier": "6.15.0",
+    "eslint-plugin-import": "2.22.1",
+    "husky": "4.3.0",
+    "microbundle": "0.12.4",
+    "prettier": "2.2.0",
+    "pretty-quick": "3.1.0",
+    "rimraf": "3.0.2",
+    "typescript": "4.1.2"
+  },
+  "scripts": {
+    "build": "bash scripts/build.sh",
+    "ci:test": "npm run ts-check",
+    "lint": "eslint src --ext ts",
+    "ts-check": "tsc --noEmit"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "release": {
+    "branches": [
+      "main"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true",
+      "pre-commit": "pretty-quick --staged"
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "type": "object",
+  "required": ["dateTime", "bookingLink", "attributes"],
+  "additionalProperties": false,
+  "properties": {
+    "dateTime": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "bookingLink": {
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "uri"
+        },
+        {
+          "type": "object",
+          "required": ["url", "method"],
+          "properties": {
+            "url": {
+              "type": "string",
+              "format": "uri"
+            },
+            "method": {
+              "type": "string"
+            },
+            "formUrlEncoded": {
+              "type": "object",
+              "minProperties": 1
+            },
+            "jsonData": {
+              "type": "object",
+              "minProperties": 1
+            }
+          }
+        }
+      ]
+    },
+    "attributes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

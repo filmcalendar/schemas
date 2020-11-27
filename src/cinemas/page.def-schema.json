@@ -1,0 +1,28 @@
+{
+  "type": "object",
+  "required": ["url", "venue", "films", "sessions"],
+  "additionalProperties": false,
+  "properties": {
+    "url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "venue": {
+      "type": "string"
+    },
+    "films": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "sessions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

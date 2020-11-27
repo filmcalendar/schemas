@@ -1,0 +1,31 @@
+{
+  "type": "object",
+  "required": ["name", "url", "address"],
+  "additionalProperties": false,
+  "properties": {
+    "ref": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "chain": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "address": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string",
+      "pattern": "^[0-9 +]+$"
+    },
+    "email": {
+      "type": "string",
+      "format": "email"
+    }
+  }
+}
