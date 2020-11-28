@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
 rimraf dist
-microbundle --target node --sourcemap false --format modern
+microbundle --output dist/index.js  --no-pkg-main --target node --sourcemap false --format esm

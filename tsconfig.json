@@ -3,13 +3,13 @@
     "baseUrl": "./",
     "declaration": true,
     "esModuleInterop": true,
-    "module": "commonjs",
+    "module": "ESNext",
     "moduleResolution": "node",
     "outDir": "./dist",
     "removeComments": true,
     "resolveJsonModule": true,
     "strict": true,
-    "target": "es5"
+    "target": "ESNext"
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules/**/*"]

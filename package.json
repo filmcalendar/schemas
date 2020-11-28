@@ -7,9 +7,10 @@
   "license": "MIT",
   "keywords": [],
   "files": [
-    "dist/*.ts"
+    "dist/index.js",
+    "dist/index.d.ts"
   ],
-  "main": "dist/index.mjs",
+  "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "source": "src/index.ts",
   "devDependencies": {
