@@ -31,7 +31,6 @@
   },
   "scripts": {
     "build": "bash scripts/build.sh",
-    "ci:test": "npm run ts-check",
     "lint": "eslint src --ext ts",
     "ts-check": "tsc --noEmit"
   },
