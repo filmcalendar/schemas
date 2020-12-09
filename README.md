@@ -1,4 +1,4 @@
-# filmcalendar/schemas
+# schemas
 
 <p>
   <img src="https://img.shields.io/npm/v/@filmcalendar/schemas">
