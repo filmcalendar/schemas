@@ -1,5 +1,5 @@
 {
-  "$id": "http://filmcalendar.schemas/cinemas/schema.json",
+  "$id": "http://filmcalendar.schemas/films/schema.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
   "required": ["entities", "result"],
@@ -7,17 +7,17 @@
   "properties": {
     "entities": {
       "type": "object",
-      "required": ["venues", "films", "sessions", "pages"],
+      "required": ["providers", "films", "pages"],
       "additionalProperties": false,
       "properties": {
-        "venues": {
+        "providers": {
           "type": "object",
           "minProperties": 1,
           "propertyNames": {
             "pattern": "^[a-z0-9-]*$"
           },
           "additionalProperties": {
-            "$ref": "#/definitions/venue"
+            "$ref": "#/definitions/provider"
           }
         },
         "films": {
@@ -57,8 +57,25 @@
           "propertyNames": {
             "pattern": "^[a-z0-9-]*$"
           }
+        },
+        "availability": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/definitions/availability"
+          },
+          "propertyNames": {
+            "pattern": "^[a-z0-9-]*$"
+          }
         }
-      }
+      },
+      "anyOf": [
+        {
+          "required": ["sessions"]
+        },
+        {
+          "required": ["availability"]
+        }
+      ]
     },
     "result": {
       "type": "array",

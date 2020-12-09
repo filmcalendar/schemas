@@ -1,14 +1,14 @@
 {
   "type": "object",
-  "required": ["url", "venue", "films", "sessions"],
+  "required": ["url", "provider", "films"],
   "additionalProperties": false,
   "properties": {
+    "provider": {
+      "type": "string"
+    },
     "url": {
       "type": "string",
       "format": "uri"
-    },
-    "venue": {
-      "type": "string"
     },
     "films": {
       "type": "array",
@@ -23,6 +23,17 @@
       "items": {
         "type": "string"
       }
+    },
+    "availability": {
+      "type": "string"
     }
-  }
+  },
+  "anyOf": [
+    {
+      "required": ["sessions"]
+    },
+    {
+      "required": ["availability"]
+    }
+  ]
 }

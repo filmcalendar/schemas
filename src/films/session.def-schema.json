@@ -1,13 +1,13 @@
 {
   "type": "object",
-  "required": ["dateTime", "bookingLink", "attributes"],
+  "required": ["dateTime", "link", "attributes"],
   "additionalProperties": false,
   "properties": {
     "dateTime": {
       "type": "string",
       "format": "date-time"
     },
-    "bookingLink": {
+    "link": {
       "oneOf": [
         {
           "type": "string",

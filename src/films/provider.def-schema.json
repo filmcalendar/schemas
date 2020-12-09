@@ -1,9 +1,9 @@
 {
   "type": "object",
-  "required": ["name", "url", "address"],
+  "required": ["name", "type", "url"],
   "additionalProperties": false,
   "properties": {
-    "ref": {
+    "address": {
       "type": "string"
     },
     "name": {
@@ -12,20 +12,24 @@
     "chain": {
       "type": "string"
     },
-    "url": {
+    "email": {
       "type": "string",
-      "format": "uri"
-    },
-    "address": {
-      "type": "string"
+      "format": "email"
     },
     "phone": {
       "type": "string",
       "pattern": "^[0-9 +]+$"
     },
-    "email": {
+    "ref": {
+      "type": "string"
+    },
+    "type": {
+      "pattern": "cinema|live-tv|streaming",
+      "type": "string"
+    },
+    "url": {
       "type": "string",
-      "format": "email"
+      "format": "uri"
     }
   }
 }

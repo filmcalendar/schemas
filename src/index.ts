@@ -1,3 +1,3 @@
-import cinemas from './cinemas';
+import films from './films';
 
-export default { cinemas };
+export default { films };

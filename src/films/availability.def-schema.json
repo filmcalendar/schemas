@@ -1,0 +1,21 @@
+{
+  "type": "object",
+  "required": ["start", "end", "attributes"],
+  "additionalProperties": false,
+  "properties": {
+    "start": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "end": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "attributes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
