@@ -1,6 +1,6 @@
 {
   "type": "object",
-  "required": ["url", "provider", "films"],
+  "required": ["url", "provider", "films", "isFeatured"],
   "additionalProperties": false,
   "properties": {
     "provider": {
@@ -26,6 +26,9 @@
     },
     "availability": {
       "type": "string"
+    },
+    "isFeatured": {
+      "type": "boolean"
     }
   },
   "anyOf": [
