@@ -5,7 +5,7 @@ on:
       - main
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -16,9 +16,10 @@ jobs:
       - run: yarn --frozen-lockfile
       - run: yarn lint
       - run: yarn ts-check
+      - run: yarn ci:test
 
   publish-to-npm:
-    needs: build
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
