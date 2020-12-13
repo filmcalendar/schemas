@@ -1,4 +1,5 @@
 import availability from './availability.def-schema.json';
+import collection from './collection.def-schema.json';
 import film from './film.def-schema.json';
 import page from './page.def-schema.json';
 import provider from './provider.def-schema.json';
@@ -10,6 +11,7 @@ export default {
   ...schema,
   definitions: {
     availability,
+    collection,
     film,
     page,
     provider,

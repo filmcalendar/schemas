@@ -66,6 +66,15 @@
           "propertyNames": {
             "pattern": "^[a-z0-9-]*$"
           }
+        },
+        "collections": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/definitions/collection"
+          },
+          "propertyNames": {
+            "pattern": "^[a-z0-9-]*$"
+          }
         }
       },
       "anyOf": [

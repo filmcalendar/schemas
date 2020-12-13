@@ -29,6 +29,12 @@
     },
     "isFeatured": {
       "type": "boolean"
+    },
+    "collections": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     }
   },
   "anyOf": [
